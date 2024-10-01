@@ -1,0 +1,58 @@
+.main {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  flex-wrap: wrap;
+  place-content: center;
+  background-color: #000;
+
+
+  .button {
+    padding: .5rem 1rem;
+    border-radius: 999px;
+    font-size: 1.2rem;
+    outline: none;
+    border: none;
+
+    &.enable {
+      background-color: #04aa6d;
+    }
+
+    &.disable {
+      background-color: #f00a;
+    }
+  }
+
+  .cursor {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-color: transparent;
+    border: 2px solid #fff8;
+    border-radius: 50%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+  }
+
+  .message {
+    display: none;
+  }
+}
+
+@media (width <=1100px) {
+  .main {
+
+    .button,
+    .cursor {
+      visibility: hidden;
+    }
+
+    .message {
+      color: #fff;
+      display: block;
+      text-align: center;
+      width: 100%;
+    }
+  }
+}
